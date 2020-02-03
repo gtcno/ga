@@ -10,6 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       name: "checkout"
+    - name: ls
       run: ls -lt
     - name: 'Kustomize Build'
       uses: karancode/kustomize-github-action@master
