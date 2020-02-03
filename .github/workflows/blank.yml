@@ -10,12 +10,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       name: "checkout"
-    - name: ls
-      run: ls -lt
     - name: 'Kustomize Build'
       uses: karancode/kustomize-github-action@master
       with:
-        kustomize_version: '3.0.0'
-        kustomize_build_dir: '.'
+        kustomize_version: '3.5.2'
+        kustomize_build_dir: 'kustomize/nais/dev'
         kustomize_comment: false
         kustomize_build_output: "gitops/rendered.yaml"
