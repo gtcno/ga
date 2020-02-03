@@ -14,6 +14,6 @@ jobs:
       uses: karancode/kustomize-github-action@master
       with:
         kustomize_version: '3.5.2'
-        kustomize_build_dir: 'kustomize/nais/dev'
+        kustomize_build_dir: 'kustomize/tests/app'
         kustomize_comment: false
         kustomize_build_output: "gitops/rendered.yaml"
