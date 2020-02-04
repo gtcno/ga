@@ -10,9 +10,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       name: "checkout"
-    - name: 'Kustomize Build'
+    - name: 'Kustomize Setup'
       uses: imranismail/setup-kustomize@master
       with:
         kustomize-version: "3.1.0"
+    - name: "Kustomize build"
       run: kustomize version
 
