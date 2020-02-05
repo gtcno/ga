@@ -11,9 +11,7 @@ jobs:
     - uses: actions/checkout@v2
       name: "checkout"
     - name: 'Kustomize Setup'
-      uses: imranismail/setup-kustomize@master
-      with:
-        kustomize-version: "3.1.0"
+      uses: gtcno/setup-kustomize@master
     - name: "Kustomize build"
       run: kustomize version
 
