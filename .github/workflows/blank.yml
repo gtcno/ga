@@ -4,14 +4,14 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
       name: "checkout"
     - name: 'Kustomize Setup'
-      uses: gtcno/setup-kustomize@master
-    - name: "Kustomize build"
-      run: kustomize version
+      uses: stefanprodan/kube-tools@v1.2.0
+      with:
+        kustomize: 3.5.4
+        command: |
+          kustomize version
 
